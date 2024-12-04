@@ -32,4 +32,4 @@ Si tienes sugerencias, comentarios o correcciones sobre los proyectos o las sesi
 
 ## Contacto
 
-Si tienes alguna pregunta o sugerencia, puedes contactarme a través de [mi correo](alancalderondev@gmail.com) ó [mi perfil de GitHub](https://github.com/alancalderondev) .
+Si tienes alguna pregunta o sugerencia, puedes contactarme a través de mi correo: [alancalderondev@gmail.com](alancalderondev@gmail.com) ó [mi perfil de GitHub](https://github.com/alancalderondev) .
