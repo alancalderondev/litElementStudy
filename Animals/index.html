@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title"></title>
+    <script type="module" src="./js/cabecera.js"></script>
+    <script type="module" src="./js/main.js"></script>
+</head>
+<body>
+    <cabecera-principal></cabecera-principal>
+    <contenedor-principal id="contPrincipal"></contenedor-principal>
+    
+</body>
+<style>
+    @import url("https://use.typekit.net/euz1eqv.css");
+    
+    body{
+        background-color: #23272A;
+        overflow: hidden;
+    }
+</style>
+
+<script>
+    document.getElementById('title').innerHTML = 'Animals';
+    const dataAnimals = [
+    {
+        title: "Amur Leopard",
+        status: "Critically Endangered",
+        image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/123024/leopard2.jpg",
+      },
+      {
+        title: "Asiatic Lion",
+        status: "Endangered",
+        image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/123024/lion2.jpg",
+      },
+      {
+        title: "Siberian Tiger",
+        status: "Endangered",
+        image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/123024/tiger2.jpg",
+      },
+      {
+        title: "Brown Bear",
+        status: "Least Concern",
+        image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/123024/bear2.jpg",
+      },
+    ];
+    document.getElementById('contPrincipal').data = dataAnimals;
+
+    
+</script>
+</html>
