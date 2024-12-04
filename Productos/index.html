@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="module" src="productos.js"></script>
+        <script type="module" src="hello-world.js"></script>
+    </head>
+
+    <body>
+        <!-- Definimos los componentes de la página -->
+        <hello-world name="World"></hello-world>
+        <list-productos id="listProducts"></list-productos>
+    </body>
+
+    <script>
+        // Obtenemos la etiqueta referenciada por su id
+        const boxProductos = document.getElementById('listProducts');
+        //METODO PARA PASARLE UN ARREGLO
+        /* Creamos un arreglo de productos
+        const productos = ['television', 'celular', 'refrigerador'];
+        // Le pasamos la data a nuestra etiqueta
+        */
+
+        //METODO PARA PASARLE OBJETOS
+        /*
+        const productos = [
+            { name: 'television', src: 'https://images.vexels.com/content/127688/preview/flat-lcd-tv-34f779.png' },
+            { name: 'celular', src: 'https://static.vecteezy.com/system/resources/thumbnails/010/829/960/small/new-realistic-mobile-smart-phone-modern-style-png.png' },
+            { name: 'refrigerador', src: 'https://i.pinimg.com/originals/40/fa/6f/40fa6fcaa22020868a8c58cee458dd7c.png' }
+        ];*/
+
+        //Utilizando una API
+        const URL_API = "https://fakestoreapi.com/products";
+        fetch(URL_API)//SOLICITUD GET
+        .then(response =>{//PROCESAMOS LA RESPUESTA
+            if (!response.ok) {//SI LA RESPUES NO FUE OK ENTONCES MANDAMOS UN ERROR
+                throw new Error('Network response was not ok');
+            }
+            //COMO LA RESPUESTA FUE POSITIVA LA CONVERTIMOS A JSON
+            return response.json();
+        })
+        .then(data =>{
+            console.log(data);
+            boxProductos.data = data;//Asignamos el data a nuestra etiqueta
+        })
+        .catch(error =>{
+            console.error("Hubo un error con la API");
+        })
+        //boxProductos.data = productos;
+    </script>
+</html>
